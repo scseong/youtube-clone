@@ -1,7 +1,12 @@
 import React from 'react';
+import Header from './components/Header';
+import { Outlet } from 'react-router-dom';
 
 export default function App() {
-  console.log(fetch('popular').then(res => res.json()).then(console.log));
-  console.log(fetch('related').then(res => res.json()).then(console.log));
-  return <div>Youtube</div>;
+  return (
+    <>
+      <Header />
+      <Outlet />
+    </>
+  );
 }
