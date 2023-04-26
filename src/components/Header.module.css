@@ -1,0 +1,157 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 0.4rem 2rem;
+}
+
+/* logo */
+.logo {
+}
+
+.logoColor {
+  margin-right: 0.1rem;
+  color: var(--youtube-color);
+}
+
+.logo h1 span {
+  font-size: 1.2rem;
+  font-weight: bolder;
+  letter-spacing: -2px;
+}
+
+.logo h1 span::after {
+  margin-left: 4px;
+  content: 'KR';
+  color: var(--text-secondary-color);
+  font-size: 0.6rem;
+  vertical-align: super;
+}
+
+.logo h1 a {
+  display: flex;
+  align-items: center;
+}
+
+/* search */
+.search {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex: 0 1 728px;
+}
+
+.search .formBox {
+  width: 100%;
+  margin-left: 4rem;
+  padding: 0 0.4rem;
+}
+
+.search .formBox .inputBox {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  position: relative;
+  align-items: center;
+  margin-left: 3rem;
+  padding-left: 1rem;
+  border: 1px solid #000;
+  border-radius: 2rem 0 0 2rem;
+}
+
+.search form {
+  position: relative;
+  display: flex;
+}
+
+.search form .searchIcon {
+  display: none;
+  position: absolute;
+  top: 10px;
+  left: 14px;
+  font-size: 1.2rem;
+}
+
+.search form:focus-within .searchIcon {
+  display: inline-block;
+}
+
+.search form:focus-within .inputBox {
+  margin-left: 0;
+  padding-left: 2.5rem;
+}
+
+.search .inputBox:focus-within {
+  border: 1px solid blue;
+}
+
+.search form input {
+  width: 100%;
+  transition: all 0.2s ease-in-out;
+}
+
+.search > button {
+  min-width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  vertical-align: middle;
+  transition: background-color 0.1s ease-in-out;
+  cursor: pointer;
+}
+
+.search > button:hover {
+  background-color: var(--button-bg-hover-color);
+}
+
+.submitBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 64px;
+  background-color: var(--button-bg-color);
+  border: 1px solid #000;
+  border-left: none;
+  border-radius: 0 2rem 2rem 0;
+  cursor: pointer;
+}
+
+.submitBtn svg {
+  width: 24px;
+  height: 24px;
+}
+
+/* icons */
+.icons {
+  display: flex;
+  min-width: 200px;
+  align-items: center;
+  gap: 10px;
+  justify-content: flex-end;
+}
+
+.icons button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  vertical-align: middle;
+  transition: background-color 0.1s ease-in-out;
+  cursor: pointer;
+}
+
+.icons button:hover {
+  background-color: var(--button-bg-hover-color);
+}
+
+:root {
+  --header-height: 56px;
+  --youtube-color: red;
+}
+
+button {
+  background: none;
+  border: none;
+  outline: none;
+}
