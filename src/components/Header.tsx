@@ -1,11 +1,19 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import styles from './Header.module.css';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { FaYoutube, FaRegBell } from 'react-icons/fa';
 import { BiVideoPlus, BiSearch } from 'react-icons/bi';
 import { MdKeyboardVoice } from 'react-icons/md';
 
 export default function Header() {
+  const inputRef = useRef<HTMLInputElement>(null);
+  const navigate = useNavigate();
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    if (!inputRef.current?.value) return;
+    navigate(`results/${inputRef.current?.value}`);
+  };
+
   return (
     <header className={styles.header}>
       <div className={styles.logo}>
@@ -18,12 +26,17 @@ export default function Header() {
       </div>
       <div className={styles.search}>
         <div className={styles.formBox}>
-          <form action="">
+          <form onSubmit={handleSubmit}>
             <div className={styles.inputBox}>
               <div>
                 <BiSearch className={styles.searchIcon} />
               </div>
-              <input type="text" placeholder="검색" />
+              <input
+                type="text"
+                name="search"
+                placeholder="검색"
+                ref={inputRef}
+              />
             </div>
             <button className={styles.submitBtn}>
               <BiSearch />

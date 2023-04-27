@@ -75,11 +75,11 @@
   font-size: 1.2rem;
 }
 
-.search form:focus-within .searchIcon {
+.search .inputBox:focus-within .searchIcon {
   display: inline-block;
 }
 
-.search form:focus-within .inputBox {
+.search .inputBox:focus-within {
   margin-left: 0;
   padding-left: 2.5rem;
 }
@@ -97,9 +97,8 @@
   min-width: 40px;
   height: 40px;
   border-radius: 50%;
-  vertical-align: middle;
-  transition: background-color 0.1s ease-in-out;
   cursor: pointer;
+  transition: background-color 0.1s ease-in-out;
 }
 
 .search > button:hover {
@@ -136,9 +135,8 @@
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  vertical-align: middle;
-  transition: background-color 0.1s ease-in-out;
   cursor: pointer;
+  transition: background-color 0.1s ease-in-out;
 }
 
 .icons button:hover {
