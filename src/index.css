@@ -49,6 +49,8 @@ a {
 input {
 	font-family: 'Roboto', sans-serif;
 	font-weight: normal;
+	border: none;
+	outline: none;
 }
 button {
 	background-color: inherit;
