@@ -55,14 +55,18 @@ input {
 button {
 	background-color: inherit;
 	border: none;
+	outline: none;
 }
 * {
     box-sizing: border-box;
 }
 :root {
+	--youtube-logo-color: #ff0000;
 	--text-primary-color: #0f0f0f;
 	--text-secondary-color: #606060;
 
 	--button-bg-color: rgba(0, 0, 0, 0.05);
 	--button-bg-hover-color: rgba(0, 0, 0, 0.1);
+
+	--header-height: 56px;
 }

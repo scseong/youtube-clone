@@ -9,12 +9,9 @@
 }
 
 /* logo */
-.logo {
-}
-
 .logoColor {
   margin-right: 0.1rem;
-  color: var(--youtube-color);
+  color: var(--youtube-logo-color);
 }
 
 .logo h1 span {
@@ -51,10 +48,10 @@
 }
 
 .search .formBox .inputBox {
-  width: 100%;
-  height: 40px;
   display: flex;
   position: relative;
+  width: 100%;
+  height: 40px;
   align-items: center;
   margin-left: 3rem;
   padding-left: 1rem;
@@ -141,15 +138,4 @@
 
 .icons button:hover {
   background-color: var(--button-bg-hover-color);
-}
-
-:root {
-  --header-height: 56px;
-  --youtube-color: red;
-}
-
-button {
-  background: none;
-  border: none;
-  outline: none;
 }
