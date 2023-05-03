@@ -1,0 +1,17 @@
+main {
+  overflow: hidden;
+}
+
+.mainBox {
+  display: flex;
+  flex-direction: column;
+  margin-top: var(--header-height);
+}
+
+.mainBox div:first-child {
+  flex-basis: 50px;
+}
+
+.videos {
+  margin-top: 50px;
+}
