@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './VideoCard.module.css';
 import { IItems } from '../typings/db';
-import { FormatAgo } from './FormatAgo';
+import { FormatAgo } from '../utils/date';
 
 interface IVideo {
   video: IItems;
@@ -11,14 +11,16 @@ export default function VideoCard({ video }: IVideo) {
   const { title, channelTitle, publishedAt, channelId, thumbnails } =
     video.snippet;
   return (
-    <li>
-      <div className="thumbnail">
+    <li className={styles.videoItem}>
+      <div className={styles.thumbnail}>
         <img src={thumbnails.medium.url} alt={title} />
       </div>
-      <div className="videoInfo">
-        <h3>{title}</h3>
-        <p>{channelTitle}</p>
-        <FormatAgo date={publishedAt} />
+      <div className={styles.videoInfo}>
+        <h2 title={title}>{title}</h2>
+        <div className={styles.videoDesc}>
+          <p title={channelTitle}>{channelTitle}</p>
+          <p>{FormatAgo(publishedAt)}</p>
+        </div>
       </div>
     </li>
   );

@@ -1,0 +1,36 @@
+.videoItem {
+  flex-basis: 320px;
+  cursor: pointer;
+}
+
+.videoItem:hover .thumbnail img {
+  border-radius: 0;
+}
+
+.thumbnail img {
+  border-radius: 1rem;
+  transition: border-radius 0.5s ease-in-out;
+}
+
+.videoInfo h2 {
+  margin: 0.5rem 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  line-height: 1.1rem;
+}
+
+.videoDesc p {
+  color: var(--text-secondary-color);
+  font-size: 0.8rem;
+}
+
+.videoDesc p:first-child {
+  margin-bottom: 0.2rem;
+}
+
+.videoDesc p:first-child:hover {
+  color: var(--text-primary-color);
+}

@@ -21,7 +21,7 @@ export default function Videos() {
       <div className={styles.mainBox}>
         <FeedFilter />
         <div className={styles.videos}>
-          <ul>
+          <ul className={styles.videoLists}>
             {videos &&
               videos.map((video) => <VideoCard key={video.id} video={video} />)}
           </ul>

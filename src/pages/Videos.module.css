@@ -14,4 +14,12 @@ main {
 
 .videos {
   margin-top: 50px;
+  padding: 1rem 0;
+}
+
+.videoLists {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
 }
