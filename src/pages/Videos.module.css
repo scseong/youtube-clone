@@ -1,0 +1,27 @@
+main {
+  overflow: hidden;
+}
+
+.mainBox {
+  max-width: 2000px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  margin-top: var(--header-height);
+}
+
+.mainBox div:first-child {
+  flex-basis: 50px;
+}
+
+.videos {
+  margin-top: 50px;
+  padding: 1rem 0;
+}
+
+.videoLists {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
