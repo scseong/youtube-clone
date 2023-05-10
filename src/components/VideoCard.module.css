@@ -3,13 +3,32 @@
   cursor: pointer;
 }
 
+.videoItem:hover .thumbnail .player {
+  display: block;
+}
+
 .videoItem:hover .thumbnail img {
   border-radius: 0;
+}
+
+.thumbnail {
+  position: relative;
 }
 
 .thumbnail img {
   border-radius: 1rem;
   transition: border-radius 0.5s ease-in-out;
+}
+
+.thumbnail .player {
+  position: absolute;
+  display: none;
+  top: 0;
+  transition: all 0.5s ease-in-out;
+}
+
+.videoInfo {
+  padding: 0 0.3rem;
 }
 
 .videoInfo h2 {
@@ -22,15 +41,16 @@
   line-height: 1.1rem;
 }
 
-.videoDesc p {
+.videoMeta p {
+  width: fit-content;
   color: var(--text-secondary-color);
   font-size: 0.8rem;
 }
 
-.videoDesc p:first-child {
-  margin-bottom: 0.2rem;
+.videoMeta p:first-child {
+  margin-bottom: 0.3rem;
 }
 
-.videoDesc p:first-child:hover {
+.videoMeta p:first-child:hover {
   color: var(--text-primary-color);
 }

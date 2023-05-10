@@ -2,6 +2,7 @@
   width: 100%;
   position: fixed;
   background-color: var(--bg-color);
+  z-index: 2023;
 }
 
 .filter ul {
